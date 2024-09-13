@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valifest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='eventGuest.css') }}">
+
+</head>
+<body>
+    <div class = 'info'> 
+        
+        <table border="1px">
+            <thead>
+                <tr>
+                
+                    <th>BESCHRIJVING</th>
+                    <th>LOCATIE</th>                    
+                    <th>AANMELDER</th>
+                    <th>DATUM</th>
+                    <th>TIJD START</th>
+                    <th>TIJD EIND</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for event_calendar in events%}
+                <tr>
+                <td> {{event_calendar.description}} </td>
+                <td> {{event_calendar.location}} </td>                
+                <td> {{event_calendar.username}}</td>
+                <td> {{event_calendar.event_date}} </td>
+                <td> {{event_calendar.start_time}} </td>
+                <td> {{event_calendar.end_time}} </td>
+
+                </tr>
+                {% endfor%}
+</body>
+
+{# beschrijving, , aanmelder, datum, tijd start, tijd end #}
+</html>

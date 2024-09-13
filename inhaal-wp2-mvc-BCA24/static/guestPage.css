@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(to bottom, #0cc2b3, #d319b4);
+    transition: background 0.5ms ease; 
+
+}
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.agenda {
+    text-align: below;
+    font-size: 25px;
+}
+.title {
+    text-align: center;
+    font-size: 45px;
+}
+
+.kalender {
+    
+    position: center;
+    background-color: rgb(255, 255, 255);
+    left: 40%;
+    bottom: 100px;
+    width: 490px;
+    padding: 25px;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+.kalender td {
+    font-size: 20px;
+    
+}
+
+.NextPage {
+    font-size: 50%;
+    position: absolute;
+    right: 20%;
+    top: 20%;
+}
+
+.PreviousPage {
+    font-size: 50%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+.nieuwButton {
+    font-size: 20px;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background:#ffffff;
+    border-radius: 5px; 
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nieuwEventButton {
+    font-size: 20px;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background:#ffffff;
+    border-radius: 5px; 
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

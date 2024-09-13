@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='userLogin.css') }}">
+    <title>Valifest</title>
+</head>
+
+<body>
+    <div>
+        <section class = 'title'>
+            <div class ='title' ></div>
+            <h1 >VALIFEST</h1>
+
+    <div>
+        <section class ="admin">
+            <h1 >User Login</h1>
+    </div>
+    </div>
+        <div>
+            <div class="panel">
+                <form action="{{ url_for('userLogin') }}" method="post">
+                    <label for="Gebruikersnaam">Username</label>
+                    <input 
+                        type="text"
+                        name="username"
+                        placeholder="Gebruikersnaam"
+                        required
+                    >
+                    <label for="wachtwoord">Password</label>
+                    <input 
+                        type="password"
+                        name="password"
+                        placeholder="wachtwoord"
+                        required
+                    >
+                    <input
+                        class="log-in-button"
+                        type="submit"
+                        value="Log In"
+                    >
+                </form>
+                <a class="forgot" href="#">Wachtwoord vergeten</a>
+                <hr>
+                <a class="forgot" href="#">Nieuw account aanmaken</a>
+            </div>
+
+            <div class="messagesbox">
+                {% for message in get_flashed_messages() %}
+                    <div class="alert alert-danger" role="alert">{{ message }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

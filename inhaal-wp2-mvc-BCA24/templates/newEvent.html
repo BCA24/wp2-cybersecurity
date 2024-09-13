@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='newEvent.css') }}">
+    <title>Valifest</title>
+</head>
+<body>
+      {% if user_role == 'admin' or  user_role == 'user' %}
+        <a href="http://127.0.0.1:5001/create/agenda" class="nieuwButton">Nieuw event aanmaken</a>
+      {% endif %}
+  <div>
+
+      <form method="POST">
+
+    
+        <label for="name"> Naam:</label>
+        <input type="text" id="name" name="naam" required><br><br> 
+    
+        <label for="description">description:</label>
+        <input type="text" id="description" name="description" required><br><br>
+    
+        <label for="event_date">Event Date:</label>
+        <input type="date" id="event_date" name="event_date" required><br><br>
+
+        <label for="start_time">Start Time:</label>
+        <input type="time" id="start_time" name="start_time" required><br><br>
+
+        <label for="end_time">End Time:</label>
+        <input type="time" id="end_time" name="end_time" required><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <label for="agenda_id">Agenda ID:</label>
+        <input type="text" id="agenda_id" name="agenda_id" required><br><br>
+
+        <input type="submit" value="Bevestig nieuw event">
+
+      
+        <a href="http://127.0.0.1:5001/agenda" class="backAgenda">Ga terug naar agenda</a>
+  </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='newAgenda.css') }}">
+    <title>Valifest</title>
+</head>
+<body>
+
+  <div>
+      <button class="nieuwButton">Nieuw agenda aanmaken</button>
+
+      <form method="POST">
+
+
+    <label for="url_name">URL Naam:</label>
+    <input type="text" id="url_name" name="url_name" required><br><br> 
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="external_stylesheet">External Stylesheet (optional):</label>
+    <input type="text" id="external_stylesheet" name="external_stylesheet"><br><br>
+
+    <label for="date_created">Date Created:</label>
+    <input type="date" id="date_created" name="date_created" required><br><br>
+
+    <input type="submit" value="Bevestig nieuw agenda">
+  
+    <a href="http://127.0.0.1:5001/agenda" class="backAgenda">Ga terug naar agenda</a>
+  </form>
+</body>
+</html>

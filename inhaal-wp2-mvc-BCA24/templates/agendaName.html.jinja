@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valifest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='agendaName.css') }}">
+
+</head>
+<body>
+<div>
+    {% if user_role == 'admin' or  user_role == 'user' %}
+        <a href="http://127.0.0.1:5001/create/event" class="nieuwEventButton">Nieuw event aanmaken</a>
+    {% endif %}
+</div>
+<div>
+        <section class = 'title'>
+            <div class ='title' ></div>
+            <h1 >VALIFEST</h1>
+    <div>
+        <section class ="agenda">
+            <h1 >Event</h1>
+    </div>
+
+    <!-- <div class = 'nextPage'>
+        <h5> <a href="http://127.0.0.1:5001/agenda?page={{page+1}}" > Next 20 </h5></a>
+        <h5> <a href="{{ url_for('agendaname', agenda_name=agenda_name, page=page+1 if page else 2) }}"> Next 20 </a> </h5>
+    </div>
+
+    <div class = 'previousPage'>
+        <h5> <a href="http://127.0.0.1:5001/agenda?page={{page-1}}" > Previous 20 </h5></a>
+    </div> -->
+
+    <div class="pagination">
+        {% if page > 1 %}
+            <a href="{{ url_for('agendaname', agenda_name=agenda_name, page=page-1) }}">Previous</a>
+        {% endif %}
+        {% if page < total_pages %}
+            <a href="{{ url_for('agendaname', agenda_name=agenda_name, page=page+1) }}">Next</a>
+        {% endif %}
+    </div>
+
+    <div class = 'kalender'> 
+        
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>EVENT</th>
+                    <th>LOCATIE</th>
+                    <th>DATUM</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event_calendar in events%}
+                <tr>
+                <td> <a href = "http://127.0.0.1:5001/event/{{event_calendar.name}}">{{event_calendar.name}} </a></td>
+                <td> {{event_calendar.location}} </td>                
+                <td>{{event_calendar.event_date}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

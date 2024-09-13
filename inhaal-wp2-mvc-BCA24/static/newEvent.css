@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(to bottom, #0cc2b3, #d319b4);
+    transition: background 0.5ms ease; 
+}
+
+.nieuwButton {
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background:#ffffff;
+    border-radius: 5px; 
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.backAgenda {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 70px;  
+    height: 70px;  
+    padding: 30px;
+    background-color: #ffffff;
+    color: #000000;  
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
